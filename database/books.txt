@@ -1,0 +1,20 @@
+1,J.K. Rowling,Harry Potter and the Philosopher's Stone,Fantasy
+2,George Orwell,1984,Dystopian
+3,J.R.R. Tolkien,The Hobbit,Fantasy
+4,Harper Lee,To Kill a Mockingbird,Classic
+5,Jane Austen,Pride and Prejudice,Romance
+6,F. Scott Fitzgerald,The Great Gatsby,Classic
+7,Mark Twain,The Adventures of Tom Sawyer,Classic
+8,Isaac Asimov,Foundation,Science Fiction
+9,Mary Shelley,Frankenstein,Horror
+10,Suzanne Collins,The Hunger Games,Dystopian
+11,Stephen King,It,Horror
+12,Agatha Christie,Murder on the Orient Express,Mystery
+13,Arthur Conan Doyle,The Hound of the Baskervilles,Mystery
+14,Dan Brown,The Da Vinci Code,Thriller
+15,Margaret Atwood,The Handmaid's Tale,Dystopian
+16,Ernest Hemingway,The Old Man and the Sea,Classic
+17,Charlotte Brontë,Jane Eyre,Romance
+18,Leo Tolstoy,War and Peace,Historical
+19,Gabriel García Márquez,One Hundred Years of Solitude,Magical Realism
+20,Paulo Coelho,The Alchemist,Philosophical

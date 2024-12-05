@@ -1,0 +1,10 @@
+1,John Doe,Bachelor of Science in Computer Science,1
+2,Jane Smith,Bachelor of Science in Information Technology,2
+3,Michael Brown,Bachelor of Engineering in Civil Engineering,3
+4,Emily Davis,Bachelor of Business Administration,4
+5,David Wilson,Bachelor of Secondary Education,1
+6,Sarah Johnson,Bachelor of Science in Architecture,2
+7,Chris Lee,Bachelor of Science in Nursing,3
+8,Alice Martin,Bachelor of Arts in Psychology,4
+9,James Clark,Bachelor of Fine Arts,1
+10,Emma Lewis,Bachelor of Laws,2
