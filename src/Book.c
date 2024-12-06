@@ -16,3 +16,16 @@ typedef struct {
     char author[AUTHOR_LENGTH];
     char isbn[ISBN_LENGTH];
 } Book;
+
+void displayBooks(Book books[], int count);
+
+int main() {
+    Book library[MAX_BOOKS];
+    int bookCount = 0;
+
+ displayBooks(library, bookCount);
+
+    return 0;
+}
+
+
