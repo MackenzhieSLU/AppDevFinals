@@ -1,10 +1,5 @@
-//
-// Created by Nathan Mikhail on 12/6/2024.
-//
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#ifndef LIBRARY_H
+#define LIBRARY_H
 
 #define MAX_BOOKS 100
 #define TITLE_LENGTH 100
@@ -16,3 +11,8 @@ typedef struct {
     char author[AUTHOR_LENGTH];
     char isbn[ISBN_LENGTH];
 } Book;
+
+void addBook();
+void displayBooks();
+
+#endif
