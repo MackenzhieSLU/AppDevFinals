@@ -6,9 +6,9 @@
 #define MAX_BOOKS 100
 
 // Function Prototypes
-void borrow_book(const char *book_id, const char *user);
-void return_book(const char *book_id, const char *user);
-void log_transaction(const char *action, const char *book_id, const char *user);
+void borrowBook(const char *book_id, const char *user);
+void returnBook(const char *book_id, const char *user);
+void logTransaction(const char *action, const char *book_id, const char *user);
 
 // Global book data storage
 char book_ids[MAX_BOOKS][20];
@@ -17,7 +17,7 @@ char book_titles[MAX_BOOKS][100];
 int book_count = 0;
 
 // Load books from the file
-void load_books() {
+void loadBooks() {
     FILE *file = fopen("books.txt", "r");
     if (!file) {
         perror("Failed to open books.txt");
@@ -46,7 +46,7 @@ void load_books() {
 }
 
 // Check if a book exists
-int find_book_index(const char *book_id) {
+int findBookIndex(const char *book_id) {
     for (int i = 0; i < book_count; i++) {
         if (strcmp(book_ids[i], book_id) == 0) {
             return i;
@@ -56,33 +56,33 @@ int find_book_index(const char *book_id) {
 }
 
 // Borrow a book
-void borrow_book(const char *book_id, const char *user) {
-    int index = find_book_index(book_id);
+void borrowBook(const char *book_id, const char *user) {
+    int index = findBookIndex(book_id);
     if (index == -1) {
         printf("Book with ID %s not found.\n", book_id);
         return;
     }
 
     // Log the borrow transaction
-    log_transaction("BORROWED", book_id, user);
+    logTransaction("BORROWED", book_id, user);
     printf("Book '%s' borrowed by %s.\n", book_titles[index], user);
 }
 
 // Return a book
-void return_book(const char *book_id, const char *user) {
-    int index = find_book_index(book_id);
+void returnBook(const char *book_id, const char *user) {
+    int index = findBookIndex(book_id);
     if (index == -1) {
         printf("Book with ID %s not found.\n", book_id);
         return;
     }
 
     // Log the return transaction
-    log_transaction("RETURNED", book_id, user);
+    logTransaction("RETURNED", book_id, user);
     printf("Book '%s' returned by %s.\n", book_titles[index], user);
 }
 
 // Log transaction to logs.txt
-void log_transaction(const char *action, const char *book_id, const char *user) {
+void logTransaction(const char *action, const char *book_id, const char *user) {
     FILE *log_file = fopen("logs.txt", "a");
     if (!log_file) {
         perror("Failed to open logs.txt");
@@ -95,11 +95,11 @@ void log_transaction(const char *action, const char *book_id, const char *user) 
 
 int main() {
     // Load books from the file
-    load_books();
+    loadBooks();
 
     // Borrow and return book examples
-    borrow_book("B101", "John Doe");
-    return_book("B101", "John Doe");
+    borrowBook("B101", "John Doe");
+    returnBook("B101", "John Doe");
 
     return 0;
 }
