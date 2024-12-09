@@ -18,7 +18,7 @@ int book_count = 0;
 
 // Load books from the file
 void loadBooks() {
-    FILE *file = fopen("books.txt", "r");
+    FILE *file = fopen("../database/books.txt", "r");
     if (!file) {
         perror("Failed to open books.txt");
         exit(EXIT_FAILURE);
@@ -98,8 +98,8 @@ int main() {
     loadBooks();
 
     // Borrow and return book examples
-    borrowBook("B101", "John Doe");
-    returnBook("B101", "John Doe");
+    borrowBook("1", "John Doe");
+    returnBook("1", "John Doe");
 
     return 0;
 }
