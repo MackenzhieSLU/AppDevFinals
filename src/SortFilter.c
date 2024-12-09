@@ -45,7 +45,17 @@ void filterBooksByAuthor(Book books[], int count, const char *author) {
     }
 }
 
-// Filtering by genere
-void filterBooksByGenre () {
-    //TODO: insert the code here for filtering the books by genre
+// Filtering by genre
+void filterBooksByGenre (Book books[], int count, const char *genre) {
+    printf("Books in genre '%s':\n", genre);
+    int found = 0;
+    for (int i = 0; i < count; i++) {
+        if (strcmp(books[i].genre, genre) == 0) {
+            printf("Title: %s, Author: %s, ISBN: %s\n", books[i].title, books[i].author, books[i].isbn);
+            found++;
+        }
+    }
+    if (found == 0) {
+        printf("No books found in genre '%s'.\n", genre);
+    }
 }
