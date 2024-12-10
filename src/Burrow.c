@@ -83,7 +83,7 @@ void returnBook(const char *book_id, const char *user) {
 
 // Log transaction to logs.txt
 void logTransaction(const char *action, const char *book_id, const char *user) {
-    FILE *log_file = fopen("logs.txt", "a");
+    FILE *log_file = fopen("../database/burrow_logs.txt", "a");
     if (!log_file) {
         perror("Failed to open logs.txt");
         exit(EXIT_FAILURE);
